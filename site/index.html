@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Экокультура</title>
+  </head>
+  <body>
+    <div class="container bg-image align-items-center">
+        <div class="row">
+          <div class="col-lg border: flex: 1 0 50%" style="background-image: url('images/tomat.jpg');height: 300px;">
+            
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg border: flex: 1 0 50%">
+              <H1 style="font-size: 50px; color: black;
+              text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+               3px 4px 4px rgba(179, 147, 211, 0.15),
+               4px 6px 4px rgba(179, 147, 211, 0.2),
+               5px 8px 4px rgba(179, 147, 211, 0.25);
+               font-family: 'Roboto', sans-serif;
+               text-align: center;">Опытный эксперимент по работе со светоосветительным оборудованием
+                на базе ТК "Дары природы"
+              </H1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg text-center border: flex: 1 0 50%">
+                <button class="btn btn-default" id="button" onclick="toggleFrame()">Наработка за день</button>
+                <div id="overlay" onclick="closeFrame()"></div>
+                <iframe id="frame" width="1155" height="739" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2109427162&amp;format=interactive"></iframe>
+            </div>
+            
+            <div class="col-lg text-center border: flex: 1 0 50%">
+                <button class="btn btn-default" id="button1" onclick="toggleFrame1()">Наработка за все время</button>
+                <div id="overlay1" onclick="closeFrame1()"></div>
+                <iframe id="frame1" width="1155" height="739" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2049160190&amp;format=interactive"></iframe>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-lg border: flex: 1 0 50%">
+              
+            </div>
+          </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        function toggleFrame() {
+            var frame = document.getElementById("frame");
+            var overlay = document.getElementById("overlay");
+            var button = document.getElementById("button");
+            
+            if (frame.style.display === "none") {
+                frame.style.display = "block";
+                overlay.style.display = "block";
+                button.style.backgroundColor = "#f44336";
+            } else {
+                frame.style.display = "none";
+                overlay.style.display = "none";
+                button.style.backgroundColor = "#4CAF50";
+            }
+        }
+        
+        function closeFrame() {
+            var frame = document.getElementById("frame");
+            var overlay = document.getElementById("overlay");
+            var button = document.getElementById("button");
+            
+            frame.style.display = "none";
+            overlay.style.display = "none";
+            button.style.backgroundColor = "#4CAF50";
+        }
+    </script>
+    <script>
+        function toggleFrame1() {
+            var frame = document.getElementById("frame1");
+            var overlay = document.getElementById("overlay1");
+            var button = document.getElementById("button1");
+            
+            if (frame.style.display === "none") {
+                frame.style.display = "block";
+                overlay.style.display = "block";
+                button.style.backgroundColor = "#f44336";
+            } else {
+                frame.style.display = "none";
+                overlay.style.display = "none";
+                button.style.backgroundColor = "#4CAF50";
+            }
+        }
+        
+        function closeFrame1() {
+            var frame = document.getElementById("frame1");
+            var overlay = document.getElementById("overlay1");
+            var button = document.getElementById("button1");
+            
+            frame.style.display = "none";
+            overlay.style.display = "none";
+            button.style.backgroundColor = "#4CAF50";
+        }
+    </script>
+</body>
+</html>
