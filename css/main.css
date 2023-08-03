@@ -1,9 +1,10 @@
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+ background-size: cover;
+
 body { background-color: #e2e0f7;
 
-}
-
-iframe, object, embed {
-    max-width: 100%;
 }
 
 
@@ -40,6 +41,7 @@ div.1 {
     border: none;
     cursor: pointer;
     margin-top: 20%;
+    text-align: center;
 }
 #overlay1 {
     display: none;
@@ -68,4 +70,5 @@ div.1 {
     border: none;
     cursor: pointer;
     margin-top: 20%;
+    text-align: center;
 }
