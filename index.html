@@ -1,23 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-     <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(94518065, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/94518065" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,13 +14,13 @@
   <body>
     <div class="container bg-image align-items-center">
         <div class="row">
-          <div class="col-lg border: flex: 1 0 50%" style="background-image: url('images/tomat.jpg');height: 300px;">
+          <div class="col border: flex: 1 0 50%" style="background-image: url('images/tomat.jpg');height: 150px;">
             
             </div>
         </div>
         <div class="row">
-            <div class="col-lg border: flex: 1 0 50%">
-              <H1 style="font-size: 50px; color: black;
+            <div class="col border: flex: 1 0 50%">
+              <H1 style="font-size: 30px; color: black;
               text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
                3px 4px 4px rgba(179, 147, 211, 0.15),
                4px 6px 4px rgba(179, 147, 211, 0.2),
@@ -48,22 +32,20 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg text-center border: flex: 1 0 50%">
-                <button class="btn btn-default" id="button" onclick="toggleFrame()">Наработка за день</button>
+            <div class="col text-center">
+                <button class="btn button" id="button" onclick="toggleFrame()">Наработка за день</button>
                 <div id="overlay" onclick="closeFrame()"></div>
-                <iframe id="frame" width="1155" height="739" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2109427162&amp;format=interactive"></iframe>
+                <iframe class="myframe" id="frame" width="1155" height="739" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2109427162&amp;format=interactive"></iframe>
             </div>
             
-            <div class="col-lg text-center border: flex: 1 0 50%">
-                <button class="btn btn-default" id="button1" onclick="toggleFrame1()">Наработка за все время</button>
+            <div class="col text-center">
+              
+                <button class="btn button1" id="button1" onclick="toggleFrame1()">Наработка общее</button>
                 <div id="overlay1" onclick="closeFrame1()"></div>
-                <iframe id="frame1" width="1155" height="739" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2049160190&amp;format=interactive"></iframe>
+                <iframe class="myframe" id="frame1"  width="1155" height="739" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2049160190&amp;format=interactive"></iframe>
               </div>
           </div>
-          <div class="row">
-            <div class="col-lg border: flex: 1 0 50%">
-              
-            </div>
+
           </div>
       </div>
 
