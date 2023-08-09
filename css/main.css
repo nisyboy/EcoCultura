@@ -35,7 +35,7 @@ div.1 {
       display: none;
       position: fixed;
       top: 50%;
-      left: 49%;
+      left: 47%;
       transform: translate(-50%, -50%);
       z-index: 10000;
       transition: opacity 0.3s ease;
@@ -48,7 +48,7 @@ div.1 {
   #button {
     background-color: #89305c;
     color: white;
-    padding: 30px 70px;
+    padding: 30px 50px;
     border: none;
     cursor: pointer;
     margin-top: 20%;
@@ -90,7 +90,7 @@ div.1 {
     display: none;
     position: fixed;
     top: 50%;
-    left: 49%;
+    left: 47%;
     transform: translate(-50%, -50%);
     z-index: 10000;
     transition: opacity 0.3s ease;
