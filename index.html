@@ -27,33 +27,68 @@
         </div>
         <div class="row">
             <div class="col border: flex: 1 0 50%">
-              <H1 style="font-size: 30px; color: white;
+              <H1 style="font-size: 32px; color: white;
               text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1),
                3px 4px 4px rgba(255, 255, 255, 0.15),
                4px 6px 4px rgba(255, 255, 255, 0.2),
                5px 8px 4px rgba(255, 255, 255, 0.25);
                font-family: 'Roboto', sans-serif;
-               text-align: center;">Учет показаний LED-досвета на ТК "Дары природы"
+               text-align: center;">ТК «Дары природы»
+              </H1>
+              <br>
+              <H1 style="font-size: 23px; color: white;
+               font-family: 'Roboto', sans-serif;
+               text-align: center;
+               text-shadow: 1px 0 1px #000; ">Учет данных наработки LED-досвета <br>
+в рамках испытаний на площади 240 м2
+              </H1>
+              <br>
+              
+              <H1 style="font-size: 23px; color: white;
+               text-align: center;
+               text-shadow: 1px 0 1px #000;">Количество LED-светильников: 48 ед
+              </H1>
+              <br>
+              <H1 style="font-size: 23px; color: white;
+               font-family: 'Roboto', sans-serif;
+               text-align: center;
+               text-shadow: 1px 0 1px #000;">Культура: томат, сорт нун
               </H1>
             </div>
           </div>
           <div class="row">
             <div class="col text-center">
-                <button class="btn button" id="button" onclick="toggleFrame()">Общий учет</button>
+                <button class="btn button" id="button" onclick="toggleFrame()"
+                style="font-size: 18px; color: white;
+               font-family: 'Roboto', sans-serif;
+               text-align: center;
+               text-shadow: 1px 0 1px #000; ">Наработка общая</button>
                 <div id="overlay" onclick="closeFrame()"></div>
-                <iframe class="myframe" id="frame" width="431" height="599" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2109427162&amp;format=interactive"></iframe>
+                <iframe class="myframe" id="frame" width="415" height="599" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2109427162&amp;format=interactive"></iframe>
+                
             </div>
+
             
-            <div class="col text-center">
-              
-                <button class="btn button1" id="button1" onclick="toggleFrame1()">Суточный учет</button>
+            <div class="col text-center" id="frame-container" >
+                
+                <button class="btn button1" id="button1" onclick="toggleFrame1()"
+                style="font-size: 18px; color: white;
+               font-family: 'Roboto', sans-serif;
+               text-align: center;
+               text-shadow: 1px 0 1px #000; ">Наработка суточная</button>
                 <div id="overlay1" onclick="closeFrame1()"></div>
-                <iframe class="myframe" id="frame1" width="431" height="599" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2049160190&amp;format=interactive"></iframe>
+                <iframe class="myframe" id="frame1" width="415" height="599" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBwwWWq25FDNFCOsZ92eV0PP4It3PkigjCVHdS1RhJ95PwQ77pzM70sxPRY01SR7BsTOG2oaY7dA-W/pubchart?oid=2049160190&amp;format=interactive"></iframe>
+                
               </div>
+              
+              
           </div>
+          
+         
 
         
-      </div>
+      </div> 
+      
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -82,6 +117,7 @@
             var overlay = document.getElementById("overlay");
             var button = document.getElementById("button");
             
+            
             frame.style.display = "none";
             overlay.style.display = "none";
             button.style.backgroundColor = "#89305c";
@@ -92,26 +128,34 @@
             var frame = document.getElementById("frame1");
             var overlay = document.getElementById("overlay1");
             var button = document.getElementById("button1");
+            var closebutton = document.getElementById("close-button")
             
             if (frame.style.display === "none" || frame.style.display === "") {
                 frame.style.display = "block";
                 overlay.style.display = "block";
                 button.style.backgroundColor = "#ff9ff8";
+                closebutton.style.display = "block"; // добавляем отображение кнопки
             } else {
                 frame.style.display = "none";
                 overlay.style.display = "none";
                 button.style.backgroundColor = "#fbebfd";
+                closebutton.style.display = "none";
             }
+              
+
         }
         
         function closeFrame1() {
             var frame = document.getElementById("frame1");
             var overlay = document.getElementById("overlay1");
             var button = document.getElementById("button1");
+            var closebutton = document.getElementById("close-button")
             
             frame.style.display = "none";
             overlay.style.display = "none";
             button.style.backgroundColor = "#89305c";
+            closebutton.style.display = "none";
+            
         }
     </script>
 </body>
