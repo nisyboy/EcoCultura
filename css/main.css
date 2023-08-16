@@ -35,7 +35,7 @@ div.1 {
       display: none;
       position: fixed;
       top: 50%;
-      left: 46%;
+      left: 50%;
       transform: translate(-50%, -50%);
       z-index: 10000;
       transition: opacity 0.3s ease;
@@ -90,7 +90,7 @@ div.1 {
     display: none;
     position: fixed;
     top: 50%;
-    left: 46%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10000;
     transition: opacity 0.3s ease;
@@ -117,3 +117,32 @@ div.1 {
   #button1:active {
     background-color: #fbebfd;
   }
+
+  
+
+  #close-button {
+    display: none; // скрываем кнопку по умолчанию
+    position: relative; // добавляем абсолютное позиционирование
+    top: 50%; // выравниваем по вертикали
+    left: 50%; // выравниваем по горизонтали
+    transform: translate(-50%, 50%); // центрируем кнопку
+    z-index: 10009; // устанавливаем более высокий z-index, чем у iframe
+    background-color: #89305c;
+    color: gray;
+    padding: 10px 20px; // уменьшаем размер кнопки
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+
+  #close-button:hover {
+    transform: scale(1.1);
+  }
+
+  #close-button:active {
+    background-color: #fbebfd;
+  }
+
+  
