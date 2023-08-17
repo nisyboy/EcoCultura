@@ -87,7 +87,7 @@
             </div>
 
             
-            <div class="col text-center" id="frame-container" >
+            <div class="col text-center">
                 
                 <button class="btn button1" id="button1" onclick="toggleFrame1()"
                 style="font-size: 18px; color: white;
@@ -100,8 +100,53 @@
               </div>
               
               
+              
           </div>
-          
+
+    <div class="row" >
+        <div class="col">
+        <button id="button2" onclick="closeFrame1()" style="
+        display: none;
+        position: fixed;
+        top: 85%;
+        left: 90%;
+        background-color: rgba(218, 207, 207, 0.884);
+        transform: translate(-50%, 50%);
+        z-index: 1000000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(218, 207, 207, 0.884);
+        inset 0 2px 0 rgba(0, 0, 0, .6);
+        font-size:large;"
+        >X</button>
+               </div>
+    </div>
+    <div class="row" >
+        <div class="col">
+        <button id="button3" onclick="closeFrame()" style="
+        display: none;
+        position: fixed;
+        background-color: rgba(218, 207, 207, 0.884);
+        top: 85%;
+        left: 90%;
+        transform: translate(-50%, 50%);
+        z-index: 1000000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(218, 207, 207, 0.884);
+        inset 0 2px 0 rgba(0, 0, 0, .6);
+        font-size:large;"
+        >X</button>
+               </div>
+    </div>
          
 
         
@@ -118,6 +163,7 @@
             var frame = document.getElementById("frame");
             var overlay = document.getElementById("overlay");
             var button = document.getElementById("button");
+            var closebutton = document.getElementById("button3")
             
             if (frame.style.display === "none" || frame.style.display === "") {
                 frame.style.display = "block";
@@ -128,17 +174,26 @@
                 overlay.style.display = "none";
                 button.style.backgroundColor = "#fbebfd";
             }
+
+            if (frame.style.display === "block" || frame.style.display === "") {
+                closebutton.style.display = "block"; // добавляем отображение кнопки
+            } else {
+                closebutton.style.display = "none";
+            }
+
         }
         
         function closeFrame() {
             var frame = document.getElementById("frame");
             var overlay = document.getElementById("overlay");
             var button = document.getElementById("button");
+            var closebutton = document.getElementById("button3")
             
             
             frame.style.display = "none";
             overlay.style.display = "none";
             button.style.backgroundColor = "#89305c";
+            closebutton.style.display = "none";
         }
     </script>
     <script>
@@ -146,20 +201,25 @@
             var frame = document.getElementById("frame1");
             var overlay = document.getElementById("overlay1");
             var button = document.getElementById("button1");
-            var closebutton = document.getElementById("close-button")
+            var closebutton = document.getElementById("button2")
             
             if (frame.style.display === "none" || frame.style.display === "") {
                 frame.style.display = "block";
                 overlay.style.display = "block";
                 button.style.backgroundColor = "#ff9ff8";
-                closebutton.style.display = "block"; // добавляем отображение кнопки
+               
             } else {
                 frame.style.display = "none";
                 overlay.style.display = "none";
                 button.style.backgroundColor = "#fbebfd";
+                
+            }
+
+            if (frame.style.display === "block" || frame.style.display === "") {
+                closebutton.style.display = "block"; // добавляем отображение кнопки
+            } else {
                 closebutton.style.display = "none";
             }
-              
 
         }
         
@@ -167,7 +227,7 @@
             var frame = document.getElementById("frame1");
             var overlay = document.getElementById("overlay1");
             var button = document.getElementById("button1");
-            var closebutton = document.getElementById("close-button")
+            var closebutton = document.getElementById("button2")
             
             frame.style.display = "none";
             overlay.style.display = "none";
