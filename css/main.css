@@ -1,7 +1,5 @@
 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
+
  
 div.1 {
     font-size: 70px;
@@ -41,6 +39,7 @@ div.1 {
       transition: opacity 0.3s ease;
     /* стили для xs-устройств */
   }
+  
   }
   
 
@@ -105,6 +104,7 @@ div.1 {
     border: none;
     cursor: pointer;
     margin-top: 20%;
+    margin-bottom: 10%;
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
@@ -145,4 +145,14 @@ div.1 {
     background-color: #fbebfd;
   }
 
-  
+
+  @media (max-width: 767px) {
+    #text1{
+      font-size: 18px;
+    }
+  }
+  @media (min-width: 767px) {
+    #text1{
+      font-size: 23px;
+    }
+  }
