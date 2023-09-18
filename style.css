@@ -138,6 +138,7 @@ button {
 table {
     width: 100%;
     table-layout: fixed;
+    padding-bottom: 20px;
   }
   
   td {
